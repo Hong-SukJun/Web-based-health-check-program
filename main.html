@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./btn_style.css">
+  <title>SMART_MIRROR</title>
+</head>
+<body style="background-color: black;" >
+    <!-- 총 몸체부분 -->
+    <div class="parent">
+      <!-- 영상컨테이너 -->
+      <div class="video-container">
+        <video id="video" autoplay></video>
+        <h2 id="time"></h2>
+        <h2 id="temp_hum"></h2>
+        <div class="Serial">
+          <button class="w-btn-outline w-btn-green2-outline" type="button" id="video_btn" onclick="video_func()">카메라 ON/OFF</button>
+          <button class="w-btn-outline w-btn-green2-outline" type="button" id="capture" class="capture">심박&호흡 ON/OFF</button>
+          <button class="w-btn-outline w-btn-green2-outline" type="button" id="toggleButton">근전도 ON/OFF</button>
+          <!-- <button class="w-btn-outline w-btn-green2-outline" type="button" onclick="disconnect()">센서 연결끊기</button> -->
+        </div>
+      </div>
+        <!-- 센서 표시 컨테이너 -->
+        <div class="Sensor">
+          <!-- Pose_Face 컨테이너 -->
+          <div class="Pose_Face_div">
+            <div id="Pose-3d">전신</div>
+            <div id="Face-3d">안면</div>
+          </div>
+
+          <!-- EMG_PULSE-SIGNAL 컨테이너 -->
+          <div class="Emg_Pulse_div">
+            <div id="Emg">근전도</div>
+            <div id="Pulse">심박(BPM)
+              <h2 id="Pulse_text">-</h2>
+            </div>
+          </div>
+        
+          
+          <!-- RESPIRATION_STRESS-SIGNAL 컨테이너 -->
+          <div class="Respiration_Stress_div">
+            <div id="Respiration">호흡(BPM)
+              <h2 id="Respiration_text">-</h2>
+            </div>
+            <div id="Stress">스트레스
+              <h2 id="Stress_text">-</h2>
+            </div>
+          </div>
+      </div>
+      </div>
+  
+
+    <script type="text/javascript" src="./time.js"></script> <!-- 시간 표시 모듈 --> 
+    <script type="text/javascript" src="./html_websocket.js"></script> <!-- 웹소켓 클라이언트(온습도 표시) 모듈 -->
+    <script type="text/javascript" src="./html_websocket2.js"></script> <!-- 웹소켓 클라이언트(Pose, Stress, Respiration 표시) 모듈2 -->
+    <script type="text/javascript" src="./face_pose_3d.js"></script> <!-- Pose, Face 표시 모듈 -->
+    <script type="text/javascript" src="./emg_chart.js"></script> <!-- Emg 차트 표시 모듈 -->
+    <script type="text/javascript" src="./video_btn.js"></script> <!-- 영상표시/비표시 모듈-->
+</body>
+</html>

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+/* */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    padding: 100px;
+    background: whitesmoke;
+    display: table-cell;
+}
+
+button {
+    margin: 5px;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 400px;
+    transition: 0.25s;
+}
+
+
+.w-btn-green2-outline {
+    border: 3px solid white;
+    color: black;
+    width: 200px;
+    font-weight: bold;
+}
+
+
+.w-btn-green2-outline:hover {
+    border: 3px solid #519d9e;
+    color: black;
+    width: 220px;
+    font-weight: bold;
+    
+}
+
+.w-btn-green2-outline:active {
+    color: black;
+    background: #519d9e;
+    width: 230px;
+    font-weight: bold;
+    
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.w-btn:active {
+    transform: scale(1.2);
+    
+}
+
+.w-btn-outline:active {
+    transform: scale(1.2);
+    
+}
+
+
+@keyframes gradient1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient2 {
+    0% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+

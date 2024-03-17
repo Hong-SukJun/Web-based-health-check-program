@@ -1,0 +1,243 @@
+/*  .은 클래스 #은 id */
+
+ 
+    body {
+        /* 바디크기 조정 */
+        display: flex;
+        height: 98vh; /* 뷰포트 높이의 100% */
+        width: 55vh;
+    }
+
+    video {
+        position: absolute;
+        width: 46vh; /* 가로 길이 100% */
+        height: auto; /* 세로 길이 자동 설정 */
+        /* border:1px solid #41dfcd; */
+        margin-top: 12%;
+        border-radius: 30px;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+   /* class 구간 */
+    .parent {
+        /* 세로 방향으로 중앙에 위치시키기 위해 사용 */
+        display: flex;
+        flex-direction: column;
+        height: 89vh; /* 높이 설정 */
+        width: 100%;
+        /* border: 1px solid #fff; */
+        color: #fff;
+    }
+
+    /* .top {
+        display: flex;
+        justify-content: flex-start; 
+        width: 56vh; 
+        height: 8vh;
+        border: 1px solid red;
+    } time, temp 구역 */
+
+    .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* 부모내에서 맨 위로 */
+        width: 100%; /* 최대 가로 길이 설정 */
+        height: 45vh;
+        /* border: 1px solid yellow; */
+    }
+
+    .Sensor {
+        display: flex;
+        flex-wrap: wrap; /* 너비 벗어날경우 자동 줄바꿈*/
+        height: 50vh;
+        width: 100%; /* 최대 가로 길이 설정 */
+        /* border: 1px solid blue; */
+        align-items: center; /* 수직 정렬 */
+        justify-content: center;
+    }
+
+    .Serial {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: end; /* 가로 방향으로 가운데 정렬 */
+        margin-left: 57%;
+        margin-top: 62%;
+        width: 12vh;
+        height: 15vh;
+        z-index: 2; /* 겹치기 인덱스 */
+        /* border: 1px solid green; */
+    }
+
+    .Pose_Face_div{
+        text-align: center;
+        width: 100%;
+        height: 33%;
+        display:inline-flex;
+        align-items: center; /* 수직 정렬 */
+    }
+
+    .Emg_Pulse_div{
+        text-align: center;
+        width: 100%;
+        height: 33%;
+        display:inline-flex;
+        align-items: center; /* 수직 정렬 */
+    }
+    .Respiration_Stress_div {
+        text-align: center;
+        width: 100%;
+        height: 33%;
+        display:inline-flex;
+        align-items: center; /* 수직 정렬 */
+        justify-content: center;
+    }
+
+
+    /* id 구간 */
+
+    #temp_hum {
+        display: flex;
+        position: absolute;
+        flex-basis: 30%;
+        height: 10%;
+        margin-left: 62%;
+        margin-top: -60%;
+        z-index: 2; /* 겹치기 인덱스 */
+    }
+
+    #time {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        flex-basis: 30%;
+        height: 2%;
+        width: 22%;
+        margin-left: 65%;
+        margin-top: -80%;
+        z-index: 2; /* 겹치기 인덱스 */
+    }
+
+    #Pose-3d {
+        width: 50%;
+        height: 90%;
+        margin-right: 10px;
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        text-align: center; /* 글자를 중앙 정렬 */
+        text-indent: 10px; /*글자 들여쓰기 */
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+    #Face-3d{
+        width: 50%;
+        height: 90%;
+        margin-left: 10px;
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        text-align: center; /* 글자를 중앙 정렬 */
+        text-indent: 10px; /*글자 들여쓰기 */
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+    #Emg {
+        width: 50%;
+        height: 90%;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        text-align: center; /* 글자를 중앙 정렬 */
+        text-indent: 10px; /*글자 들여쓰기 */
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+
+    #Pulse {
+        display: flex;
+        width: 50%;
+        height: 90%;
+        margin-left: 10px;
+        margin-top: 10px; /* 오른쪽 여백 */
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        justify-content: center;
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+    #Respiration {
+        display: flex;
+        width: 50%;
+        height: 90%;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        justify-content: center;
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+    #Stress {
+        display: flex;
+        width: 50%;
+        height: 90%;
+        margin-left: 10px;
+        margin-top: 10px; /* 오른쪽 여백 */
+        border: 1px solid #fff; /* 테두리 설정 */
+        visibility: visible;
+        border-radius:15px;
+        justify-content: center;
+        font-size: 1.5em; /* 글자 크기를 2em으로 지정 */
+    }
+
+    #message {
+        position: absolute;
+        top: 23%;
+        left: 26%;
+        color: white;
+    }
+    #Pulse_text{
+        position: absolute;
+        margin-top: 8%;
+        font-size: 3em;
+        color: red;
+    }
+
+    #Stress_text {
+        position: absolute;
+        margin-top: 8%;
+        font-size: 3em;
+        color: red;
+    }
+
+    #Respiration_text {
+        position: absolute;
+        margin-top: 8%;
+        font-size: 3em;
+        color: red;
+    }
+
+
+      /* Serial 버튼
+    button {
+        font-weight: bold;
+        margin-top: 30px;
+        margin-right: 20px;
+        background-color: #41dfcd;
+        color: black;
+        border:1px solid #fff;
+        border-radius:10px;
+        padding:15px;
+        min-height:30px;
+        width: 160px;
+        font-size: 1em;
+        text-align: center;
+        line-height: 15px;
+    } */
